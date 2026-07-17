@@ -1,0 +1,45 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-07-17T00:00:00Z",
+  "subjects": [
+    {
+      "subject_id": "toan",
+      "subject_name": "Toán",
+      "grade": 3,
+      "topics": [
+        {
+          "topic_id": "toan_3_t1",
+          "week_number": 1,
+          "title": "Ôn tập các số đến 1000"
+        },
+        {
+          "topic_id": "toan_3_t2",
+          "week_number": 2,
+          "title": "Cộng trừ các số có ba chữ số (không nhớ)"
+        },
+        {
+          "topic_id": "toan_3_t3",
+          "week_number": 3,
+          "title": "Bảng nhân 3, bảng chia 3"
+        }
+      ]
+    },
+    {
+      "subject_id": "tiengviet",
+      "subject_name": "Tiếng Việt",
+      "grade": 3,
+      "topics": [
+        {
+          "topic_id": "tv_3_t1",
+          "week_number": 1,
+          "title": "Tuần 1: Những trải nghiệm thú vị"
+        },
+        {
+          "topic_id": "tv_3_t2",
+          "week_number": 2,
+          "title": "Tuần 2: Cổng trường mở ra"
+        }
+      ]
+    }
+  ]
+}

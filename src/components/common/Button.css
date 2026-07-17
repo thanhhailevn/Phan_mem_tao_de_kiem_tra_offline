@@ -1,0 +1,83 @@
+.ui-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  position: relative;
+  user-select: none;
+}
+
+/* Micro-interaction: Scale down on active removed for flat design */
+.ui-btn:active {
+  transform: none;
+}
+
+.ui-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Sizes */
+.ui-btn-sm {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+
+.ui-btn-md {
+  padding: 10px 18px;
+  font-size: 0.95rem;
+}
+
+.ui-btn-lg {
+  padding: 12px 24px;
+  font-size: 1.05rem;
+}
+
+/* --- Primary Button: Solid color fill, no gradients --- */
+.ui-btn-primary {
+  background: hsl(var(--color-primary));
+  color: white;
+}
+
+.ui-btn-primary:hover {
+  background: hsl(var(--color-primary-hover));
+}
+
+/* --- Secondary Button: Solid background, no transparency --- */
+.ui-btn-secondary {
+  background: hsl(var(--color-surface-light));
+  color: hsl(var(--color-text-light));
+  border-color: var(--color-border);
+}
+
+.ui-btn-secondary:hover {
+  background: #475569;
+  border-color: var(--color-border-hover);
+}
+
+/* --- Ghost Button: Solid fill on hover --- */
+.ui-btn-ghost {
+  background: transparent;
+  color: hsl(var(--color-text-muted));
+}
+
+.ui-btn-ghost:hover {
+  background: hsl(var(--color-surface-dark));
+  color: hsl(var(--color-text-light));
+}
+
+/* --- Danger Button --- */
+.ui-btn-danger {
+  background: hsl(var(--color-error));
+  color: white;
+}
+
+.ui-btn-danger:hover {
+  filter: brightness(0.9);
+}

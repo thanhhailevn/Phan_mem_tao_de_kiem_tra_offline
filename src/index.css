@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+:root {
+  /* Neo-Minimalist Flat Dark Colors (No Transparency, Solid Colors) */
+  --color-bg-dark: 222, 47%, 11%;     /* Solid Slate 900: #0f172a */
+  --color-surface-dark: 217, 33%, 17%;/* Solid Slate 800: #1e293b */
+  --color-surface-light: 215, 25%, 27%;/* Solid Slate 700: #334155 */
+  
+  --color-primary: 239, 84%, 67%;     /* Solid Primary (Indigo-like) */
+  --color-primary-hover: 239, 84%, 55%;
+  --color-primary-alpha: rgba(99, 102, 241, 0.15);
+  
+  --color-accent: 217, 91%, 60%;      /* Solid Vibrant Blue (No Pink/Neon gradient) */
+  
+  --color-text-light: 210, 40%, 98%;   /* Slate 50 */
+  --color-text-muted: 215, 20%, 78%;   /* Brighter Slate for WCAG AA readability */
+  
+  --color-border: #334155;            /* Crisp Solid Slate Border */
+  --color-border-hover: #475569;
+  
+  --color-error: 0, 84%, 60%;
+  --color-success: 142, 70%, 45%;
+
+  /* Flat Layout Settings */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --transition-smooth: all 0.2s ease;
+  --transition-fast: all 0.1s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: hsl(var(--color-bg-dark));
+  color: hsl(var(--color-text-light));
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  /* Solid Flat Background - NO gradient */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: hsl(var(--color-text-light));
+  margin-bottom: 0.5em;
+}
+
+p, span, label {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Force SVG outlines in Cây thư mục Sàn kiến thức */
+.tree-view-container svg {
+  fill: none !important;
+  stroke: currentColor !important;
+}
+
+/* Fallback glass-panel is now just a flat panel */
+.glass-panel {
+  background: hsl(var(--color-surface-dark));
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: var(--radius-lg);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--color-bg-dark));
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Base Form Reset */
+input, select, textarea, button {
+  font-family: inherit;
+}
+
+/* Animations without scale zoom */
+@keyframes fadeInSlideUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-enter {
+  animation: fadeInSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Global Form Controls */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Spacing between rows */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Increased from 8px for label-textbox breathing room */
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: hsl(var(--color-text-muted));
+  letter-spacing: 0.02em;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: hsl(var(--color-bg-dark));
+  color: hsl(var(--color-text-light));
+  font-size: 0.95rem;
+  transition: var(--transition-smooth);
+  outline: none;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: hsl(var(--color-primary));
+  background: hsl(var(--color-bg-dark));
+}
+
+option {
+  background: hsl(var(--color-surface-dark));
+  color: hsl(var(--color-text-light));
+}

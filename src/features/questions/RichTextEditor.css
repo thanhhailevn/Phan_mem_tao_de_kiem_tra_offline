@@ -1,0 +1,108 @@
+.rte-container {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: hsl(var(--color-bg-dark));
+  transition: var(--transition-smooth);
+}
+
+.rte-container:focus-within {
+  border-color: hsl(var(--color-primary));
+}
+
+.rte-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: hsl(var(--color-surface-dark));
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Grouping formatting buttons */
+.rte-toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-right: 8px;
+  border-right: 1px solid var(--color-border);
+}
+
+.math-toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 8px;
+}
+
+.math-toolbar-group math-field {
+  background: hsl(var(--color-bg-dark));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: white;
+  padding: 4px 8px;
+  outline: none;
+}
+
+.image-upload-wrapper {
+  margin-left: auto;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.image-upload-wrapper input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+}
+
+.rte-editor-area {
+  padding: 16px;
+  min-height: 200px;
+  cursor: text;
+  background: hsl(var(--color-bg-dark));
+}
+
+.ProseMirror {
+  outline: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: hsl(var(--color-text-light));
+  line-height: 1.6;
+  min-height: 180px;
+}
+
+.ProseMirror p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: hsl(var(--color-text-muted));
+  pointer-events: none;
+  height: 0;
+}
+
+/* Active and Hover states for Editor Ghost Buttons */
+.rte-toolbar .ui-btn-ghost {
+  border: 1px solid transparent;
+  padding: 6px;
+  border-radius: var(--radius-sm);
+}
+
+.rte-toolbar .ui-btn-ghost:hover {
+  background: hsl(var(--color-surface-light));
+  color: hsl(var(--color-text-light));
+  border-color: var(--color-border);
+}
+
+.rte-toolbar .ui-btn-ghost.active {
+  background: hsl(var(--color-primary-alpha));
+  color: hsl(var(--color-primary));
+  border-color: hsla(var(--color-primary), 0.4);
+}

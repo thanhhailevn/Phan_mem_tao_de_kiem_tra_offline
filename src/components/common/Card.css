@@ -1,0 +1,41 @@
+.ui-card {
+  background: hsl(var(--color-surface-dark));
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  transition: var(--transition-smooth);
+  padding: 24px;
+}
+
+.ui-card:hover {
+  border-color: var(--color-border-hover);
+}
+
+/* For compatibility, .glass-panel on a card is now styled identically to a flat card */
+.ui-card.glass-panel {
+  background: hsl(var(--color-surface-dark));
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ui-card.glass-panel:hover {
+  border-color: var(--color-border-hover);
+}
+
+.card-header,
+.card-body,
+.card-footer {
+  padding: 20px;
+}
+
+.card-header {
+  border-bottom: 1px solid var(--color-border);
+  background: hsl(var(--color-surface-dark));
+}
+
+.card-footer {
+  border-top: 1px solid var(--color-border);
+  background: hsl(var(--color-surface-dark));
+}

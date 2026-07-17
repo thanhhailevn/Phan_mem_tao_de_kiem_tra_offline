@@ -1,0 +1,93 @@
+.tree-view-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: hsl(var(--color-surface-dark));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.tree-view-header {
+  padding: 20px;
+  border-bottom: 1px solid var(--color-border);
+  background: hsl(var(--color-surface-dark));
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tree-view-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tree-view-header h3 {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: hsl(var(--color-text-muted));
+}
+
+.tree-view-select {
+  width: 100%;
+  background: hsl(var(--color-bg-dark));
+  border: 1px solid var(--color-border);
+  color: hsl(var(--color-text-light));
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  outline: none;
+  transition: var(--transition-smooth);
+}
+
+.tree-view-select:focus {
+  border-color: hsl(var(--color-primary));
+}
+
+.tree-view-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  min-height: 350px;
+}
+
+.tree-node-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: var(--transition-smooth);
+  gap: 10px;
+  color: hsl(var(--color-text-light));
+}
+
+.tree-node-item:hover {
+  background: hsl(var(--color-surface-light));
+}
+
+.tree-node-item.active-node {
+  background: hsla(var(--color-primary), 0.15) !important;
+  border-left: 3px solid hsl(var(--color-primary)) !important;
+  font-weight: 700 !important;
+}
+
+.tree-node-children {
+  margin-left: 20px;
+  margin-top: 4px;
+  border-left: 1px solid var(--color-border);
+  padding-left: 12px;
+}
+
+/* Force outline style on tree-view SVGs */
+.tree-view-container svg {
+  fill: none !important;
+  stroke: currentColor !important;
+  flex-shrink: 0;
+}
